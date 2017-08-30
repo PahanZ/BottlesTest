@@ -1,3 +1,4 @@
+let bottles = () => {
 let redBottlesKol = +prompt('Enter the number of red bottles', 0);
 let redBottles = [];
 for (let i = 0; i < redBottlesKol; i++) { 
@@ -47,3 +48,5 @@ for (let i = 0; i < redBottles.length; i++ ) {
 }
 console.log(redBottles);
 console.log(blueBottles);
+}
+bottles();
