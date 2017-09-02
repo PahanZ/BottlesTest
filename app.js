@@ -1,27 +1,26 @@
+let redBottlesKol = +prompt('Enter the number of red bottles', 0);
+let redBottles = [];
+for (let i = 0; i < redBottlesKol; i++) { 
+let redBottlesV = +prompt('Enter the number of liters in ' + i + ' the red bottle', 0);
+redBottles.push(redBottlesV); 
+}
+// console.log(redBottles);
+
+let blueBottlesKol = +prompt('Enter the number of blue bottles', 0);
+let blueBottles = [];
+for (let i = 0; i < blueBottlesKol; i++) { 
+blueBottles[i]=0;
+}
+// console.log(blueBottles);
+
+let blueBottlesMax = [];
+for (let i = 0; i < blueBottlesKol; i++) { 
+let maxLitr = +prompt('Enter the maximum litres ' + i + ' of blue bottles', 0);
+blueBottlesMax.push(maxLitr);
+}
+// console.log(blueBottlesMax);
+
 let bottles = () => {
-	let redBottlesKol = +prompt('Enter the number of red bottles', 0);
-	let redBottles = [];
-	for (let i = 0; i < redBottlesKol; i++) { 
-	let redBottlesV = +prompt('Enter the number of liters in ' + i + ' the red bottle', 0);
-	redBottles.push(redBottlesV); 
-	}
-	console.log(redBottles);
-
-	let blueBottlesKol = +prompt('Enter the number of blue bottles', 0);
-	let blueBottles = [];
-	for (let i = 0; i < blueBottlesKol; i++) { 
-	blueBottles[i]=0;
-	}
-	console.log(blueBottles);
-
-	let blueBottlesMax = [];
-	for (let i = 0; i < blueBottlesKol; i++) { 
-	let maxLitr = +prompt('Enter the maximum litres ' + i + ' of blue bottles', 0);
-	blueBottlesMax.push(maxLitr);
-	}
-	console.log(blueBottlesMax);
-
-
 	let j = 0;
 	let k = 0;
 	start:
@@ -31,9 +30,9 @@ let bottles = () => {
 				continue start; 
 			} else {
 				redBottles[i]--;
-				console.log(redBottles[i]);
+				// console.log(redBottles[i]);
 				blueBottles[j]++;
-				console.log(blueBottles[j]);
+				// console.log(blueBottles[j]);
 			};
 			if (blueBottles[j] == blueBottlesMax[k]) {
 				k++;
@@ -46,7 +45,7 @@ let bottles = () => {
 			}
 		} 
 	}
-	console.log(redBottles);
-	console.log(blueBottles);
+	alert(`array with red bottles ${redBottles}`);
+	alert(`array with red bottles ${blueBottles}`);
 }
 bottles();
